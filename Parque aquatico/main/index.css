@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --ocean-blue: #0092c4;
+  --bright-amber: #f5c921;
+  --vibrant-coral: #fe6f5e;
+  --magenta: #ff00ff;
+  --ash-brown: #645244;
+  --white: #ffffff;
+  --silver: #cccccc;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: 'Fredoka', 'Plus Jakarta Sans', cursive, sans-serif;
+}
+
+/* Custom scrollbars for side panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-ping-slow {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.interactive-pin:hover circle {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
+
